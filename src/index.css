@@ -1,5 +1,5 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 * {
-  font-family: sans-serif, 'Times New Roman', Times, serif;
+  font-family: "Roboto", "Times New Roman", Times, serif;
 }
