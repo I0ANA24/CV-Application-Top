@@ -36,7 +36,7 @@ const sectionsData = [
       label: "Skill",
       type: "text",
       placeholder: "Enter a skill...",
-      value: "",
+      value: "React",
     },
   },
   // Projects
@@ -53,13 +53,13 @@ const sectionsData = [
       label: "Start Date",
       type: "date",
       placeholder: "",
-      value: "",
+      value: new Date(2028, 4, 12).toISOString().split("T")[0],
     },
     endDate: {
       label: "End Date",
       type: "date",
       placeholder: "",
-      value: "",
+      value: new Date(2028, 4, 30).toISOString().split("T")[0],
     },
     projectSkills: {
       label: "Skills",
@@ -102,13 +102,13 @@ const sectionsData = [
       label: "Start Date",
       type: "date",
       placeholder: "",
-      value: "",
+      value: new Date(2028, 4, 12).toISOString().split("T")[0],
     },
     endDate: {
       label: "End Date",
       type: "date",
       placeholder: "",
-      value: "",
+      value: new Date(2028, 6, 17).toISOString().split("T")[0],
     },
     description: {
       label: "Description",
@@ -132,13 +132,13 @@ const sectionsData = [
       label: "School Name",
       type: "text",
       placeholder: "Ex: UAIC",
-      value: "UAIC",
+      value: "Alexandru Ioan Cuza University",
     },
     degree: {
       label: "Degree",
       type: "text",
       placeholder: "Ex: Bachelor of Science in Information Technology",
-      value: "Bachelor of Science in Information Technology",
+      value: "Bachelor's degree in Computer Science",
     },
     startDate: {
       label: "Start Date",
