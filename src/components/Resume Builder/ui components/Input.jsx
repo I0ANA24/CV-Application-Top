@@ -11,6 +11,7 @@ const Input = ({ item, miniSection }) => {
       value={text}
       className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
       onChange={(event) => setText(event.target.value)}
+      required
     />
   );
 };

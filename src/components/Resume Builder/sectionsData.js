@@ -124,6 +124,41 @@ const sectionsData = [
       value: "Vancouver, Canada",
     },
   },
+  // Education
+  {
+    id: 5,
+    name: "Education",
+    projectName: {
+      label: "School Name",
+      type: "text",
+      placeholder: "Ex: UAIC",
+      value: "UAIC",
+    },
+    degree: {
+      label: "Degree",
+      type: "text",
+      placeholder: "Ex: Bachelor of Science in Information Technology",
+      value: "Bachelor of Science in Information Technology",
+    },
+    startDate: {
+      label: "Start Date",
+      type: "date",
+      placeholder: "",
+      value: new Date(2025, 8, 30).toISOString().split("T")[0],
+    },
+    endDate: {
+      label: "End Date",
+      type: "date",
+      placeholder: "",
+      value: new Date(2028, 6, 17).toISOString().split("T")[0],
+    },
+    location: {
+      label: "Location",
+      type: "text",
+      placeholder: "Ex: Paris, France",
+      value: "Iași, Romania",
+    },
+  },
 ];
 
 export default sectionsData;
