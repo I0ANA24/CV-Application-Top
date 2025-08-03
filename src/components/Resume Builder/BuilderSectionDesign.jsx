@@ -14,9 +14,7 @@ const BuilderSectionDesign = ({ item }) => {
         onClick={() => setIsOpen(!isOpen)}
       />
       <div
-        className={`${
-          !isOpen ? "h-0 p-0" : "p-5"
-        } w-full flex flex-col pt-0`}
+        className={`${!isOpen ? "h-0 p-0" : "p-5"} w-full flex flex-col pt-0`}
       >
         <div className="space-y-4">
           {Object.keys(item).map((miniSection) => {
@@ -40,7 +38,7 @@ const BuilderSectionDesign = ({ item }) => {
             );
           })}
         </div>
-        <AddButton itemId={item.id}/>
+        <AddButton itemId={item.id} />
       </div>
     </div>
   );

@@ -3,3 +3,25 @@
 * {
   font-family: "Roboto", "Times New Roman", Times, serif;
 }
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #e5e5e5;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+@media (width >= 48rem) {
+  body {
+    padding: 24px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (width >= 64rem) {
+  body {
+    display: flex;
+    gap: 20px;
+  }
+}
