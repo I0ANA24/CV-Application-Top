@@ -3,7 +3,7 @@ import ExpandCollapseSectionButton from "../ui components/ExpandCollapseSectionB
 import PersonalDetailsInput from "./PersonalDetailsInput";
 
 const PersonalDetailsBuilder = ({ detailsList, setDetailsList }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="w-full bg-white rounded-lg  shadow-lg overflow-hidden">

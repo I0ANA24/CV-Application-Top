@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PersonalDetailsBuilder from "./PersonalDetails/PersonalDetailsBuilder";
-import ResumePage from "./ResumePage";
+import ResumePage from "./Resume/ResumePage";
 
 const Builder = () => {
   const [detailsList, setDetailsList] = useState({
