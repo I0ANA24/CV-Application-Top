@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Label from "./ui components/Label";
-import Input from "./ui components/Input";
-import ExpandCollapseSectionButton from "./ui components/ExpandCollapseSectionButton";
-import AddButton from "./ui components/AddButton";
+import Label from "../ui components/Label";
+import Input from "../ui components/Input";
+import ExpandCollapseSectionButton from "../ui components/ExpandCollapseSectionButton";
+import AddButton from "../ui components/AddButton";
 
 const BuilderSectionDesign = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);

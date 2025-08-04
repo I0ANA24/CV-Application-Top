@@ -4,6 +4,10 @@
   font-family: "Roboto", "Times New Roman", Times, serif;
 }
 
+#root {
+  width: 100%;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;

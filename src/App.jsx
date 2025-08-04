@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import Builder from "./components/Resume Builder/Builder";
+import Builder from "./components/Builder";
 import Footer from "./components/Footer";
 
 
