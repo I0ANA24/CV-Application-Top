@@ -31,8 +31,6 @@ const PersonalDetailsPageSection = ({ details }) => {
           </a>
         </p>
       </div>
-
-      <hr className="mt-2" />
     </section>
   );
 };

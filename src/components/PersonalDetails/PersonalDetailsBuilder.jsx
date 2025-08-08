@@ -15,7 +15,7 @@ const PersonalDetailsBuilder = ({ detailsList, setDetailsList }) => {
 
       <div
         className={`${
-          !isOpen ? "h-0 p-0" : "p-5"
+          !isOpen ? "h-0 p-0" : "p-5 pb-8"
         } w-full flex flex-col pt-0 space-y-4`}
       >
         <PersonalDetailsInput detailsList={detailsList} setDetailsList={setDetailsList} />
