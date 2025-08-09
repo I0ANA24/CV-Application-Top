@@ -34,7 +34,7 @@ const Builder = () => {
         />
         <SkillsBuilder skillsList={skillsList} setSkillsList={setSkillsList} />
       </section>
-      <ResumePage details={detailsList} />
+      <ResumePage details={detailsList} skills={skillsList} />
     </main>
   );
 };

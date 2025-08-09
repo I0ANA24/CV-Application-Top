@@ -2,7 +2,7 @@ import React from "react";
 
 const PersonalDetailsPageSection = ({ details }) => {
   return (
-    <section>
+    <section className="mb-6">
       <h1 className="overflow-hidden text-3xl text-center font-medium mb-1">
         {details.fullName}
       </h1>
