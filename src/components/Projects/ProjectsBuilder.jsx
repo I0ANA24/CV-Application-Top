@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import ExpandCollapseSectionButton from "../ui/ExpandCollapseSectionButton";
 import ProjectsInput from "./ProjectsInput";
-import AddButton from "../ui/AddButton";
-import DynamicList from "../ui/DynamicList";
-import { areAllFieldsFilled } from "../../utils/inputValidation";
-import { addObject, handleEdit } from "../../utils/objectEdit";
 import SectionForm from "../ui/SectionForm";
 
 const ProjectsBuilder = ({ projectsList, setProjectsList }) => {
