@@ -33,7 +33,7 @@ const Builder = () => {
       projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS",
       projectStartDate: "2025-03-22",
       projectEndDate: "2025-03-30",
-      projectDescription: "meowMeowMeow",
+      projectDescription: "Developed a responsive YouTube clone using React and TailwindCSS, featuring video playback, search functionality, and interactive UI components to provide a seamless user experience across devices.",
     },
     {
       id: crypto.randomUUID(),
@@ -41,7 +41,7 @@ const Builder = () => {
       projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS, NodeJS",
       projectStartDate: "2025-04-18",
       projectEndDate: "2025-06-03",
-      projectDescription: "lalala",
+      projectDescription: "Developed a full-featured e-commerce website using React, TailwindCSS, and NodeJS, implementing product listings, shopping cart, user authentication, and responsive design for an optimal shopping experience.",
     },
   ]);
 
@@ -58,7 +58,7 @@ const Builder = () => {
           setProjectsList={setProjectsList}
         />
       </section>
-      <ResumePage details={detailsList} skills={skillsList} />
+      <ResumePage details={detailsList} skills={skillsList} projects={projectsList} />
     </main>
   );
 };
