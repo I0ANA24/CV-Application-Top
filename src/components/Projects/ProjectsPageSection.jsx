@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PageSection = () => {
+const ProjectsPageSection = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const PageSection = () => {
   )
 }
 
-export default PageSection
+export default ProjectsPageSection

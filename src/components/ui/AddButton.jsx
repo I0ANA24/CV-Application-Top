@@ -1,17 +1,15 @@
 import React from "react";
+import { handleCancel, handleDelete } from "../../utils/objectEdit";
 
 const AddButton = ({
-  skill,
-  setSkill,
-  skillsList,
-  setSkillsList,
+  object,
+  setObject,
+  setObjectsList,
   selectedId,
   setSelectedId,
-  isCancelled,
-  setIsCancelled,
 }) => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 mt-2">
       <button
         type="submit"
         className="w-20 bg-green-600 hover:bg-green-600/90 cursor-pointer rounded-full text-white text-sm font-medium py-1 transition-colors duration-100"
@@ -27,12 +25,7 @@ const AddButton = ({
             : "w-20 bg-neutral-400 hover:bg-neutral-400/80 cursor-pointer rounded-full text-white text-sm font-medium py-1 transition-colors duration-100"
         }`}
         onClick={() => {
-          setSelectedId(null);
-          setSkill({
-            ...skill,
-            id: crypto.randomUUID(),
-            skillName: "",
-          });
+          handleCancel(setSelectedId, setObject);
         }}
       >
         Cancel
@@ -46,16 +39,7 @@ const AddButton = ({
             : "w-20 bg-red-700 hover:bg-red-600 cursor-pointer rounded-full text-white text-sm font-medium py-1 transition-colors duration-100"
         }`}
         onClick={() => {
-          setSkillsList((prevList) => {
-            return prevList.filter((item) => item.id !== skill.id);
-          });
-
-          setSelectedId(null);
-          setSkill({
-            ...skill,
-            id: crypto.randomUUID(),
-            skillName: "",
-          });
+          handleDelete(setSelectedId, object, setObject, setObjectsList);
         }}
       >
         Delete

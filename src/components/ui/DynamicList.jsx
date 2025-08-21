@@ -3,9 +3,7 @@ import React from "react";
 const DynamicList = ({
   list,
   name,
-  skill,
-  setSkill,
-  selectedId,
+  setFunction,
   setSelectedId,
 }) => {
   return (
@@ -16,7 +14,8 @@ const DynamicList = ({
           className="bg-blue-900 px-5 py-2 text-white text-sm font-medium rounded-full cursor-pointer"
           onClick={() => {
             setSelectedId(item.id);
-            setSkill(item);
+            setFunction(item);
+            
           }}
         >
           {item[name]}

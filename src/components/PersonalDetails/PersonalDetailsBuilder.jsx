@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExpandCollapseSectionButton from "../ui components/ExpandCollapseSectionButton";
+import ExpandCollapseSectionButton from "../ui/ExpandCollapseSectionButton";
 import PersonalDetailsInput from "./PersonalDetailsInput";
 
 const PersonalDetailsBuilder = ({ detailsList, setDetailsList }) => {

@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import ExpandCollapseSectionButton from "../ui components/ExpandCollapseSectionButton";
+import ExpandCollapseSectionButton from "../ui/ExpandCollapseSectionButton";
 import SkillsInput from "./SkillsInput";
-import AddButton from "../ui components/AddButton";
-import DynamicList from "../ui components/DynamicList";
+import AddButton from "../ui/AddButton";
+import DynamicList from "../ui/DynamicList";
 AddButton;
 
 const SkillsBuilder = ({ skillsList, setSkillsList }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedId, setSelectedId] = useState(null);
+  const [skill, setSkill] = useState({
+    id: crypto.randomUUID(),
+    skillName: "",
+  });
+
   const handleEdit = () => {
     setSkillsList((prevList) =>
       prevList.map((item) =>
@@ -13,13 +20,6 @@ const SkillsBuilder = ({ skillsList, setSkillsList }) => {
       )
     );
   };
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedId, setSelectedId] = useState(null);
-  const [skill, setSkill] = useState({
-    id: crypto.randomUUID(),
-    skillName: "",
-  });
 
   return (
     <section className="w-full bg-white rounded-lg  shadow-lg overflow-hidden">
@@ -65,21 +65,18 @@ const SkillsBuilder = ({ skillsList, setSkillsList }) => {
         >
           <SkillsInput skill={skill} setSkill={setSkill} />
           <AddButton
-            skill={skill}
-            setSkill={setSkill}
-            skillsList={skillsList}
-            setSkillsList={setSkillsList}
-            isOpen={isOpen}
+            object={skill}
+            setObject={setSkill}
+            setObjectsList={setSkillsList}
             selectedId={selectedId}
             setSelectedId={setSelectedId}
+            objectName="skillName"
           />
         </form>
         <DynamicList
           list={skillsList}
           name={"skillName"}
-          skill={skill}
-          setSkill={setSkill}
-          selectedId={selectedId}
+          setFunction={setSkill}
           setSelectedId={setSelectedId}
         />
       </div>

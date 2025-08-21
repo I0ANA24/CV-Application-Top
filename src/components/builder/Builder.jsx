@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import PersonalDetailsBuilder from "./PersonalDetails/PersonalDetailsBuilder";
-import SkillsBuilder from "./Skills/SkillsBuilder";
-import ResumePage from "./Resume/ResumePage";
+import PersonalDetailsBuilder from "../PersonalDetails/PersonalDetailsBuilder";
+import SkillsBuilder from "../Skills/SkillsBuilder";
+import ProjectsBuilder from "../Projects/ProjectsBuilder";
+import ResumePage from "../Resume/ResumePage";
 
 const Builder = () => {
   const [detailsList, setDetailsList] = useState({
@@ -25,6 +26,25 @@ const Builder = () => {
     },
   ]);
 
+  const [projectsList, setProjectsList] = useState([
+    {
+      id: crypto.randomUUID(),
+      projectName: "YouTube Clone",
+      projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS",
+      projectStartDate: "2025-03-22",
+      projectEndDate: "2025-03-30",
+      projectDescription: "meowMeowMeow",
+    },
+    {
+      id: crypto.randomUUID(),
+      projectName: "E-commerce Website",
+      projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS, NodeJS",
+      projectStartDate: "2025-04-18",
+      projectEndDate: "2025-06-03",
+      projectDescription: "lalala",
+    },
+  ]);
+
   return (
     <main className="w-full flex flex-col gap-8 lg:flex-row">
       <section className="w-full lg:w-[50%] space-y-4">
@@ -33,6 +53,10 @@ const Builder = () => {
           setDetailsList={setDetailsList}
         />
         <SkillsBuilder skillsList={skillsList} setSkillsList={setSkillsList} />
+        <ProjectsBuilder
+          projectsList={projectsList}
+          setProjectsList={setProjectsList}
+        />
       </section>
       <ResumePage details={detailsList} skills={skillsList} />
     </main>
