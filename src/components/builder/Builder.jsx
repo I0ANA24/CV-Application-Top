@@ -4,6 +4,7 @@ import SkillsBuilder from "../Skills/SkillsBuilder";
 import ProjectsBuilder from "../Projects/ProjectsBuilder";
 import ResumePage from "../Resume/ResumePage";
 import EducationBuilder from "../Education/EducationBuilder";
+import WorkExperienceBuilder from "../WorkExperience/WorkExperienceBuilder";
 
 const Builder = () => {
   const [detailsList, setDetailsList] = useState({
@@ -52,6 +53,27 @@ const Builder = () => {
     },
   ]);
 
+  const [workList, setWorkList] = useState([
+    {
+      id: crypto.randomUUID(),
+      role: "Frontend Developer Intern",
+      company: "TechNova Solutions",
+      startDate: "2024-07-01",
+      endDate: "2024-09-30",
+      description:
+        "Developed responsive web pages using React and TailwindCSS, improved website performance by 25%, and collaborated with the backend team to integrate REST APIs.",
+    },
+    {
+      id: crypto.randomUUID(),
+      role: "Web Developer Freelancer",
+      company: "Freelance",
+      startDate: "2025-01-15",
+      endDate: "2025-04-20",
+      description:
+        "Built an e-commerce website with HTML, CSS, JavaScript, and NodeJS, implemented payment gateway integration, and optimized user experience for mobile devices.",
+    },
+  ]);
+
   const [educationList, setEducationList] = useState([
     {
       id: crypto.randomUUID(),
@@ -91,6 +113,7 @@ const Builder = () => {
           projectsList={projectsList}
           setProjectsList={setProjectsList}
         />
+        <WorkExperienceBuilder workList={workList} setWorkList={setWorkList} />
         <EducationBuilder
           educationList={educationList}
           setEducationList={setEducationList}
@@ -100,6 +123,7 @@ const Builder = () => {
         details={detailsList}
         skills={skillsList}
         projects={projectsList}
+        work={workList}
         education={educationList}
       />
     </main>

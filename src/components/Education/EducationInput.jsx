@@ -4,10 +4,10 @@ const EducationInput = ({ education, setEducation }) => {
   return (
     <>
       <div className="flex flex-col">
-        <label htmlFor="4-degree">Degree</label>
+        <label htmlFor="5-degree">Degree</label>
         <input
           type="text"
-          id="4-degree"
+          id="5-degree"
           placeholder="Ex: Bachelor of Arts (BA) in Computer Science"
           value={education.degree}
           className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
@@ -18,10 +18,10 @@ const EducationInput = ({ education, setEducation }) => {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="4-name">University Name</label>
+        <label htmlFor="5-name">University Name</label>
         <input
           type="text"
-          id="4-name"
+          id="5-name"
           placeholder="Ex: University of Tokyo"
           value={education.name}
           className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
@@ -32,10 +32,10 @@ const EducationInput = ({ education, setEducation }) => {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="4-location">Location</label>
+        <label htmlFor="5-location">Location</label>
         <input
           type="text"
-          id="4-location"
+          id="5-location"
           placeholder="Ex: Tokyo, Japan"
           value={education.location}
           className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
@@ -46,10 +46,10 @@ const EducationInput = ({ education, setEducation }) => {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="4-start">Start Date</label>
+        <label htmlFor="5-start">Start Date</label>
         <input
           type="date"
-          id="4-start"
+          id="5-start"
           value={education.startDate}
           className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
           onChange={(event) =>
@@ -59,10 +59,10 @@ const EducationInput = ({ education, setEducation }) => {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="4-end">End Date</label>
+        <label htmlFor="5-end">End Date</label>
         <input
           type="date"
-          id="4-end"
+          id="5-end"
           value={education.endDate}
           className="bg-neutral-200 p-2 pl-3 rounded-md text-sm overflow-hidden outline-none"
           onChange={(event) =>
