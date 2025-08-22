@@ -11,7 +11,7 @@ const ProjectsPageSection = ({ projects }) => {
             {/* introduction */}
             <div className="w-full flex justify-between items-center mb-[2px]">
               <h3 className="font-medium text-md">{project.name}</h3>
-              <p className="font-normal text-sm">
+              <p className="font-normal text-sm mt-1">
                 {new Date(project.startDate).toLocaleString("en-US", {
                   month: "short",
                   year: "numeric",

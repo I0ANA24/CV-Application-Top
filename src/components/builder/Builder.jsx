@@ -100,6 +100,7 @@ const Builder = () => {
         details={detailsList}
         skills={skillsList}
         projects={projectsList}
+        education={educationList}
       />
     </main>
   );
