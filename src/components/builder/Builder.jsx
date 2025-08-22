@@ -29,19 +29,25 @@ const Builder = () => {
   const [projectsList, setProjectsList] = useState([
     {
       id: crypto.randomUUID(),
-      projectName: "YouTube Clone",
-      projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS",
-      projectStartDate: "2025-03-22",
-      projectEndDate: "2025-03-30",
-      projectDescription: "Developed a responsive YouTube clone using React and TailwindCSS, featuring video playback, search functionality, and interactive UI components to provide a seamless user experience across devices.",
+      name: "YouTube Clone",
+      skills: "HTML, CSS, JavaScript, React, TailwindCSS",
+      startDate: "2025-03-22",
+      endDate: "2025-03-30",
+      description:
+        "Developed a responsive YouTube clone using React and TailwindCSS, featuring video playback, search functionality, and interactive UI components to provide a seamless user experience across devices.",
+      livePreview: "https://github.com/I0ANA24/CV-Application-Top",
+      codePreview: "https://github.com/I0ANA24",
     },
     {
       id: crypto.randomUUID(),
-      projectName: "E-commerce Website",
-      projectSkills: "HTML, CSS, JavaScript, React, TailwindCSS, NodeJS",
-      projectStartDate: "2025-04-18",
-      projectEndDate: "2025-06-03",
-      projectDescription: "Developed a full-featured e-commerce website using React, TailwindCSS, and NodeJS, implementing product listings, shopping cart, user authentication, and responsive design for an optimal shopping experience.",
+      name: "E-commerce Website",
+      skills: "HTML, CSS, JavaScript, React, TailwindCSS, NodeJS",
+      startDate: "2025-04-18",
+      endDate: "2025-06-03",
+      description:
+        "Developed a full-featured e-commerce website using React, TailwindCSS, and NodeJS, implementing product listings, shopping cart, user authentication, and responsive design for an optimal shopping experience.",
+      livePreview: "https://github.com/I0ANA24/CV-Application-Top",
+      codePreview: "https://github.com/I0ANA24",
     },
   ]);
 
@@ -58,7 +64,11 @@ const Builder = () => {
           setProjectsList={setProjectsList}
         />
       </section>
-      <ResumePage details={detailsList} skills={skillsList} projects={projectsList} />
+      <ResumePage
+        details={detailsList}
+        skills={skillsList}
+        projects={projectsList}
+      />
     </main>
   );
 };

@@ -10,14 +10,14 @@ const ProjectsPageSection = ({ projects }) => {
           <div className="w-full mb-2" key={index}>
             {/* introduction */}
             <div className="w-full flex justify-between items-center mb-[2px]">
-              <h3 className="font-medium text-md">{project.projectName}</h3>
+              <h3 className="font-medium text-md">{project.name}</h3>
               <p className="font-normal text-sm">
-                {new Date(project.projectStartDate).toLocaleString("en-US", {
+                {new Date(project.startDate).toLocaleString("en-US", {
                   month: "short",
                   year: "numeric",
                 })}{" "}
                 -{" "}
-                {new Date(project.projectEndDate).toLocaleString("en-US", {
+                {new Date(project.endDate).toLocaleString("en-US", {
                   month: "short",
                   year: "numeric",
                 })}
@@ -26,14 +26,30 @@ const ProjectsPageSection = ({ projects }) => {
 
             {/* skills */}
             <div className="text-sm">
-              <p className="font-medium inline">Skills:&nbsp;</p>
-              <p className="font-normal inline">{project.projectSkills}</p>
+              <p className="font-bold inline">Skills:&nbsp;</p>
+              <p className="font-normal inline">{project.skills}</p>
             </div>
-            
+
             {/* description */}
             <div className="text-sm">
-              <p className="font-medium inline">Description:&nbsp;</p>
-              <p className="font-normal inline">{project.projectDescription}</p>
+              <p className="font-bold inline">Description:&nbsp;</p>
+              <p className="font-normal inline">{project.description}</p>
+            </div>
+
+            {/* live preview */}
+            <div className="text-sm">
+              <p className="font-bold inline">Live Preview:&nbsp;</p>
+              <p className="font-normal inline">
+                <a href={project.livePreview}>{project.livePreview}</a>
+              </p>
+            </div>
+
+            {/* code preview */}
+            <div className="text-sm">
+              <p className="font-bold inline">Code Preview:&nbsp;</p>
+              <p className="font-normal inline">
+                <a href={project.codePreview}>{project.codePreview}</a>
+              </p>
             </div>
           </div>
         ))}

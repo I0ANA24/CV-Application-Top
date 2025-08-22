@@ -7,11 +7,11 @@ const ProjectsBuilder = ({ projectsList, setProjectsList }) => {
   const [selectedId, setSelectedId] = useState(null);
   const [project, setProject] = useState({
     id: crypto.randomUUID(),
-    projectName: "",
-    projectSkills: [],
-    projectStartDate: "",
-    projectEndDate: "",
-    projectDescription: "",
+    name: "",
+    skills: [],
+    startDate: "",
+    endDate: "",
+    description: "",
   });
 
   const expandCollapseSectionButtonProps = {
@@ -36,12 +36,12 @@ const ProjectsBuilder = ({ projectsList, setProjectsList }) => {
     setObjectsList: setProjectsList,
     selectedId: selectedId,
     setSelectedId: setSelectedId,
-    objectName: "projectName",
+    objectName: "name",
   };
 
   const dynamicListProps = {
     list: projectsList,
-    name: "projectName",
+    name: "name",
     setFunction: setProject,
     setSelectedId: setSelectedId,
   };

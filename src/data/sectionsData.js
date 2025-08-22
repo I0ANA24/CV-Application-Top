@@ -43,7 +43,7 @@ const sectionsData = [
   {
     id: 3,
     name: "Projects",
-    projectName: {
+    name: {
       label: "Project Name",
       type: "text",
       placeholder: "YouTube Clone",
@@ -61,7 +61,7 @@ const sectionsData = [
       placeholder: "",
       value: new Date(2028, 4, 30).toISOString().split("T")[0],
     },
-    projectSkills: {
+    skills: {
       label: "Skills",
       type: "text",
       placeholder: "Enter a skill...",
@@ -92,7 +92,7 @@ const sectionsData = [
   {
     id: 4,
     name: "Work Experience",
-    projectName: {
+    name: {
       label: "Company Name",
       type: "text",
       placeholder: "Ex: Centric",
@@ -128,7 +128,7 @@ const sectionsData = [
   {
     id: 5,
     name: "Education",
-    projectName: {
+    name: {
       label: "School Name",
       type: "text",
       placeholder: "Ex: UAIC",
