@@ -3,6 +3,7 @@ import PersonalDetailsBuilder from "../PersonalDetails/PersonalDetailsBuilder";
 import SkillsBuilder from "../Skills/SkillsBuilder";
 import ProjectsBuilder from "../Projects/ProjectsBuilder";
 import ResumePage from "../Resume/ResumePage";
+import EducationBuilder from "../Education/EducationBuilder";
 
 const Builder = () => {
   const [detailsList, setDetailsList] = useState({
@@ -51,6 +52,33 @@ const Builder = () => {
     },
   ]);
 
+  const [educationList, setEducationList] = useState([
+    {
+      id: crypto.randomUUID(),
+      degree: "Bachelor of Engineering (BEng) in Computer Science",
+      name: "University of Tokyo",
+      location: "Tokyo, Japan",
+      startDate: "2025-04-01",
+      endDate: "2029-03-31",
+    },
+    {
+      id: crypto.randomUUID(),
+      degree: "Bachelor of Science (BSc) in Computer Science",
+      name: "Massachusetts Institute of Technology (MIT)",
+      location: "Cambridge, Massachusetts, USA",
+      startDate: "2021-09-02",
+      endDate: "2025-06-05",
+    },
+    {
+      id: crypto.randomUUID(),
+      degree: "Bachelor of Arts (BA) in Computer Science",
+      name: "University of Oxford",
+      location: "Oxford, United Kingdom",
+      startDate: "2015-10-06",
+      endDate: "2018-06-28",
+    },
+  ]);
+
   return (
     <main className="w-full flex flex-col gap-8 lg:flex-row">
       <section className="w-full lg:w-[50%] space-y-4">
@@ -62,6 +90,10 @@ const Builder = () => {
         <ProjectsBuilder
           projectsList={projectsList}
           setProjectsList={setProjectsList}
+        />
+        <EducationBuilder
+          educationList={educationList}
+          setEducationList={setEducationList}
         />
       </section>
       <ResumePage
