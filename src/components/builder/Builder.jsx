@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import PersonalDetailsBuilder from "../PersonalDetails/PersonalDetailsBuilder";
 import SkillsBuilder from "../Skills/SkillsBuilder";
 import ProjectsBuilder from "../Projects/ProjectsBuilder";
-import ResumePage from "../Resume/ResumePage";
 import EducationBuilder from "../Education/EducationBuilder";
 import WorkExperienceBuilder from "../WorkExperience/WorkExperienceBuilder";
+import ResumeWithPrint from "../Resume/ResumeWithPrint";
 
 const Builder = () => {
   const [detailsList, setDetailsList] = useState({
@@ -93,14 +93,6 @@ const Builder = () => {
       startDate: "2021-09-02",
       endDate: "2025-06-05",
     },
-    {
-      id: crypto.randomUUID(),
-      degree: "Bachelor of Arts (BA) in Computer Science",
-      name: "University of Oxford",
-      location: "Oxford, United Kingdom",
-      startDate: "2015-10-06",
-      endDate: "2018-06-28",
-    },
   ]);
 
   return (
@@ -121,7 +113,7 @@ const Builder = () => {
           setEducationList={setEducationList}
         />
       </section>
-      <ResumePage
+      <ResumeWithPrint
         details={detailsList}
         skills={skillsList}
         projects={projectsList}

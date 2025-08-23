@@ -11,10 +11,13 @@ const ResumePage = ({ details, skills, projects, work, education }) => {
     // <section className="bg-white w-full max-w-[80vw] lg:w-[50%] aspect-[210/297] lg:aspect-[210/297] shadow-neutral-400 shadow-lg mx-auto px-10 py-6 overflow-hidden space-y-2">
     <AutoPaginatedResume>
       <PersonalDetailsPageSection details={details} />
+      <EducationPageSection education={education} />
       <SkillsPageSection skills={skills} />
       <ProjectsPageSection projects={projects} />
       <WorkExperiencePageSection work={work} />
-      <EducationPageSection education={education} />
+      <WorkExperiencePageSection work={work} />
+      <WorkExperiencePageSection work={work} />
+      
     {/* // </section> */}
     </AutoPaginatedResume>
   );
