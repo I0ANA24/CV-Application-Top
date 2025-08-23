@@ -58,6 +58,7 @@ const Builder = () => {
       id: crypto.randomUUID(),
       role: "Frontend Developer Intern",
       company: "TechNova Solutions",
+      location: "Bucharest, Romania",
       startDate: "2024-07-01",
       endDate: "2024-09-30",
       description:
@@ -67,6 +68,7 @@ const Builder = () => {
       id: crypto.randomUUID(),
       role: "Web Developer Freelancer",
       company: "Freelance",
+      location: "Remote",
       startDate: "2025-01-15",
       endDate: "2025-04-20",
       description:
