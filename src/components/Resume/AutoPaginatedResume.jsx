@@ -1,23 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 
 let A4_HEIGHT_PX;
 
 const updateHeight = () => {
   const width = window.innerWidth;
-  if (width >= 1024) { // lg
+  if (width >= 1024) {
+    // lg
     A4_HEIGHT_PX = 1122;
-  } else if (width >= 768) { // sm
+  } else if (width >= 768) {
+    // sm
     A4_HEIGHT_PX = 800;
-  } else { // xs sau mobil
+  } else {
+    // xs sau mobil
     A4_HEIGHT_PX = 600;
   }
 };
 
 updateHeight();
-window.addEventListener('resize', updateHeight);
+window.addEventListener("resize", updateHeight);
 
-
-export default function AutoPaginatedResume({ children }) {
+const AutoPaginatedResume = forwardRef(({ children }, ref) => {
   const containerRef = useRef(null);
   const [pages, setPages] = useState([]);
 
@@ -53,20 +55,24 @@ export default function AutoPaginatedResume({ children }) {
 
   return (
     <div>
-      {/* invizibil pentru măsurători */}
-      <div ref={containerRef} className="absolute invisible">
+      <div ref={containerRef} className="print-container absolute invisible">
         {children}
       </div>
 
-      {/* randăm paginile finale */}
-      {pages.map((pageChildren, idx) => (
-        <div
-          key={idx}
-          className={`page bg-white w-[210mm] max-w-full min-h-[159mm] md:min-h-[212mm] lg:min-h-[297mm] shadow-lg mx-auto p-10 ${idx === pageChildren.length ? "mb-0" : "mb-6"}`}
-        >
-          {pageChildren}
-        </div>
-      ))}
+      <div ref={ref} className="print-container mx-auto">
+        {pages.map((pageChildren, idx) => (
+          <div
+            key={idx}
+            className={`page bg-white w-[210mm] max-w-full min-h-[159mm] md:min-h-[212mm] lg:min-h-[297mm] shadow-lg mx-auto p-10 ${
+              idx === pageChildren.length ? "mb-0" : "mb-6"
+            }`}
+          >
+            {pageChildren}
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+});
+
+export default AutoPaginatedResume;
